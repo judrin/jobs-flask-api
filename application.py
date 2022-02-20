@@ -4,6 +4,11 @@ import repo
 application = Flask(__name__)
 
 
+@application.route('/', methods=['GET'])
+def home():
+    return 'Hello! :)'
+
+
 @application.route('/jobs', methods=['GET'])
 def get_jobs():
     items = repo.get_items()
