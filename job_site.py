@@ -2,4 +2,4 @@ from enum import Enum
 
 
 class JobSite(Enum):
-    STACK_OVERFLOW = 1
+    INDEED = 1
