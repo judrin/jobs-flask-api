@@ -1,8 +1,11 @@
 import boto3
+import os
 from boto3.dynamodb.conditions import Key
 from job_site import JobSite
 
-dynamodb = boto3.resource('dynamodb')
+
+aws_region = os.environ.get('AWS_REGION', default='us-east-1')
+dynamodb = boto3.resource('dynamodb', region_name=aws_region)
 table = dynamodb.Table('jobs')
 
 default_job_site = JobSite.INDEED.value
