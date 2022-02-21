@@ -13,3 +13,7 @@ def home():
 def get_jobs():
     items = repo.get_items()
     return jsonify(items)
+
+
+if __name__ == "__main__":
+    application.run()
