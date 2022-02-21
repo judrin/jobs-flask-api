@@ -10,6 +10,6 @@ default_job_site = JobSite.INDEED.value
 
 def get_items():
     response = table.query(
-        KeyConditionExpression=Key('site_id').eq(default_job_site))
+        KeyConditionExpression=Key('site_id').eq(default_job_site), Limit=50)
 
     return response['Items']
