@@ -4,7 +4,7 @@ import repo
 application = Flask(__name__)
 
 
-@application.route('/', methods=['GET'])
+@application.route('/')
 def home():
     return 'Hello! :)'
 
